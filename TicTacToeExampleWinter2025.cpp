@@ -2,10 +2,21 @@
 //
 
 #include <iostream>
-
+#include "TicTacToe.h"
 int main()
 {
-    std::cout << "Hello World!\n";
+    TicTacToe game1;
+    game1.printBoard();
+
+    game1.placePlayer('o', 0, 0);
+
+    game1.printBoard();
+    game1.placePlayer('x', 0, 1);
+    game1.printBoard();
+
+    game1.resetGame();
+    game1.printBoard();
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
