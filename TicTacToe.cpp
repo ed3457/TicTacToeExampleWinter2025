@@ -18,6 +18,33 @@ void TicTacToe::placePlayer(char player, int row, int column)
 	board[row][column] = player;
 }
 
+char TicTacToe::checkWin(char player)
+{
+	
+
+	for (int i = 0; i < 3; i++)
+	{   // check rows
+		if (board[i][0] == player && board[i][1] == player && board[i][2] == player)
+			return player;
+		// check columns
+		if (board[0][i] == player && board[1][i] == player && board[2][i] == player)
+			return player;
+	}
+
+	// check diagonals 
+
+	if (board[0][0] == player && board[1][1] == player && board[2][2] == player)
+		return player;
+
+	if (board[0][2] == player && board[1][1] == player && board[2][0] == player)
+		return player;
+
+	// draw? 
+
+	return 'n';
+
+}
+
 void TicTacToe::resetGame()
 {
 	for (int i = 0; i < 3; i++)
