@@ -39,7 +39,8 @@ char TicTacToe::checkWin(char player)
 	if (board[0][2] == player && board[1][1] == player && board[2][0] == player)
 		return player;
 
-	// draw? 
+	if (moveCount == 9)
+		return 'd';
 
 	return 'n';
 
@@ -54,6 +55,7 @@ void TicTacToe::resetGame()
 			board[i][j] = ' ';
 		}
 	}
+	moveCount = 0;
 }
 
 void TicTacToe::play()
@@ -65,7 +67,7 @@ void TicTacToe::play()
 		while (true) // drive the game 
 		{   
 		
-
+			moveCount += 1;
 			// read the row and column from the user
 			int r, c;
 			cout << "Enter row (1-3):";
@@ -167,4 +169,5 @@ TicTacToe::TicTacToe()
 	resetGame();
 
 	oWins = xWins = draws = 0; 
+	moveCount = 0;
 }

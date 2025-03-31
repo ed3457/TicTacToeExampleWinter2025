@@ -9,6 +9,7 @@ private:
 	int xWins;
 	int oWins;
 	int draws;
+	int moveCount;
 
 public:
 	void placePlayer(char player, int row, int column);
