@@ -6,15 +6,15 @@
 int main()
 {
     TicTacToe game1;
-    game1.printBoard();
+    /*game1.printBoard();
 
     game1.placePlayer('o', 0, 0);
     game1.placePlayer('o', 0, 1);
     game1.placePlayer('x', 0, 2);
 
-    cout << game1.checkWin('o') << endl;
+    cout << game1.checkWin('o') << endl;*/
   
-
+    game1.play();
    
 
 }
